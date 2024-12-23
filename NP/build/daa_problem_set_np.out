@@ -1,0 +1,45 @@
+\BOOKMARK [1][-]{section.1}{Exact Cover}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Pertenencia a NP}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{NP-Hardness}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Demostraci\363n. Reducci\363n desde 3-SAT}{subsection.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.3}{NP-Completitud}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{3-Coloreo}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Pertenencia a NP}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{NP-Hardness}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Demostraci\363n. Reducci\363n desde 3-SAT}{subsection.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{NP-Completitud}{section.2}% 10
+\BOOKMARK [1][-]{section.3}{N\372mero Crom\341tico}{}% 11
+\BOOKMARK [2][-]{subsection.3.1}{Pertenencia a NP}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.2}{NP-Hardness}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Demostraci\363n. Reducci\363n desde 3-Coloreo}{subsection.3.2}% 14
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Conclusi\363n}{subsection.3.2}% 15
+\BOOKMARK [2][-]{subsection.3.3}{NP-Completitud}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Clique M\341ximo}{}% 17
+\BOOKMARK [2][-]{subsection.4.1}{Pertenencia a NP}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.2}{NP-Hardness}{section.4}% 19
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Demostraci\363n. Reducci\363n desde k-Clique}{subsection.4.2}% 20
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Conclusi\363n}{subsection.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.3}{NP-Completitud}{section.4}% 22
+\BOOKMARK [1][-]{section.5}{Cobertura de Cliques}{}% 23
+\BOOKMARK [2][-]{subsection.5.1}{Pertenencia a NP}{section.5}% 24
+\BOOKMARK [2][-]{subsection.5.2}{NP-Hardness}{section.5}% 25
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Demostraci\363n. Reducci\363n desde N\372mero Crom\341tico}{subsection.5.2}% 26
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Conclusi\363n}{subsection.5.2}% 27
+\BOOKMARK [2][-]{subsection.5.3}{NP-Completitud}{section.5}% 28
+\BOOKMARK [1][-]{section.6}{Conjunto Dominante}{}% 29
+\BOOKMARK [2][-]{subsection.6.1}{Pertenencia a NP}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.2}{NP-Hardness}{section.6}% 31
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Demostraci\363n. Reducci\363n desde Vertex Cover}{subsection.6.2}% 32
+\BOOKMARK [2][-]{subsection.6.3}{Conclusi\363n}{section.6}% 33
+\BOOKMARK [2][-]{subsection.6.4}{NP-Completitud}{section.6}% 34
+\BOOKMARK [1][-]{section.7}{Retroalimentaci\363n de V\351rtices}{}% 35
+\BOOKMARK [2][-]{subsection.7.1}{Pertenencia a NP}{section.7}% 36
+\BOOKMARK [2][-]{subsection.7.2}{NP-Hardness}{section.7}% 37
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Demostraci\363n. Reducci\363n desde Vertex Cover}{subsection.7.2}% 38
+\BOOKMARK [2][-]{subsection.7.3}{NP-Completitud}{section.7}% 39
+\BOOKMARK [1][-]{section.8}{Retroalimentaci\363n de Arcos}{}% 40
+\BOOKMARK [2][-]{subsection.8.1}{Pertenencia a NP}{section.8}% 41
+\BOOKMARK [2][-]{subsection.8.2}{NP-Hardness}{section.8}% 42
+\BOOKMARK [3][-]{subsubsection.8.2.1}{Demostraci\363n. Reducci\363n desde Retroalimentaci\363n de V\351rtices}{subsection.8.2}% 43
+\BOOKMARK [3][-]{subsubsection.8.2.2}{Conclusi\363n}{subsection.8.2}% 44
+\BOOKMARK [2][-]{subsection.8.3}{NP-Completitud}{section.8}% 45
