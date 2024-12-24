@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1735013862 "/media/danielhp/DATA/Escuela/C. Computación/Cuarto Año/DAA/DAA-Problem-Sets/NP/daa_problem_set_np.tex" "build/daa_problem_set_np.pdf" "daa_problem_set_np" 1735013863
+["pdflatex"] 1735021929 "/media/danielhp/DATA/Escuela/C. Computación/Cuarto Año/DAA/DAA-Problem-Sets/NP/daa_problem_set_np.tex" "build/daa_problem_set_np.pdf" "daa_problem_set_np" 1735021930
   "/etc/texmf/web2c/texmf.cnf" 1680493193 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/danielhp/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1734926937 14040 5c62e5fd7f275e1911c30afa8b1f8ebf ""
-  "/media/danielhp/DATA/Escuela/C. Computación/Cuarto Año/DAA/DAA-Problem-Sets/NP/daa_problem_set_np.tex" 1735013860 28755 f7e654757709c58ccfa4c606d6d26753 ""
+  "/media/danielhp/DATA/Escuela/C. Computación/Cuarto Año/DAA/DAA-Problem-Sets/NP/daa_problem_set_np.tex" 1735021927 36190 e09d62c001704ec3c34df656fcb509cd ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -100,13 +100,13 @@
   "assets/3-colOR-gadget.png" 1734985513 82050 7ad46681bb3aa674cd8b6b8657f70ea3 ""
   "assets/3-colTFB.png" 1734985491 104992 61b28ba67f2ea27a36b5f36c1c04f1b0 ""
   "assets/3-colTFBOR.png" 1734985532 80323 81bafa6ffad61724f46802c21b0bd09c ""
-  "build/daa_problem_set_np.aux" 1735013862 6904 818cb12e626d610ca2961a6e69a6290a "pdflatex"
-  "build/daa_problem_set_np.out" 1735013862 3198 ced9d587cdd5b45bc849b9ec8ce54eb4 "pdflatex"
-  "build/daa_problem_set_np.toc" 1735013862 4165 41da760c85131db0c5705c667e978bd3 "pdflatex"
-  "daa_problem_set_np.tex" 1735013860 28755 f7e654757709c58ccfa4c606d6d26753 ""
+  "build/daa_problem_set_np.aux" 1735021929 9230 ec3a4e6cab5576325d8681c2becf0582 "pdflatex"
+  "build/daa_problem_set_np.out" 1735021929 4482 f9f074bb8547e01878a99538dec42396 "pdflatex"
+  "build/daa_problem_set_np.toc" 1735021929 5753 0c63aad0f293660b596bdc3a759e1fed "pdflatex"
+  "daa_problem_set_np.tex" 1735021927 36190 e09d62c001704ec3c34df656fcb509cd ""
   (generated)
+  "build/daa_problem_set_np.aux"
+  "build/daa_problem_set_np.toc"
   "build/daa_problem_set_np.out"
   "build/daa_problem_set_np.pdf"
-  "build/daa_problem_set_np.toc"
-  "build/daa_problem_set_np.aux"
   "build/daa_problem_set_np.log"

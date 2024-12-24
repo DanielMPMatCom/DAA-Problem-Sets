@@ -446,6 +446,108 @@ Como \textbf{Retroalimentaci\'on de Arcos} es NP-Hard y pertenece a NP, concluim
 
 
 
+\section{NAE 4-SAT (Not-All-Equal 4-SAT)}
 
+\textbf{Definici\'on:} Dada una f\'ormula booleana en CNF donde cada cl\'ausula tiene exactamente 4 literales, determinar si existe una asignaci\'on de valores de verdad a las variables de modo que en cada cl\'ausula no todos los literales sean verdaderos ni todos sean falsos.
+
+\subsection{Pertenencia a NP}
+El problema \textbf{NAE 4-SAT} pertenece a NP porque, dada una asignaci\'on de valores de verdad a las variables, podemos verificar en tiempo polinomial si no todos los literales en cada cl\'ausula son iguales y la fórmula es satisfacible.
+
+\subsection{NP-Hardness}
+
+Demostraremos que \textbf{NAE 4-SAT} es NP-Hard mediante una reducci\'on desde \textbf{3-SAT}.
+
+\subsubsection{Demostraci\'on. Reducción desde 3-SAT}
+Dada una instancia de \textbf{3-SAT} $\phi$, construiremos una instancia equivalente de \textbf{NAE 4-SAT} $\phi'$ en tiempo polinomial. Para ello agregamos una nueva variable $z$ a cada cl\'ausula de $\phi$.
+Demostremos que $\phi$ es satisfacible si y solo si $\phi'$ es satisfacible. \\
+
+$(\Rightarrow)$ Si $x_1, \ldots, x_n$ es una asignación satisfacible para $\phi$, entonces la misma asignación satisface $\phi'$ cuando elegimos $z=0$. \\
+
+$(\Leftarrow)$ Supongamos que $x_1, \ldots, x_n, z$ es una asignación satisfacible de $\phi'$. Nótese que
+$\neg{x_1}, \ldots, \neg{x_n}, \neg{z}$ también es una asignación satisfacible de $\phi'$ (porque $NAE(a,b,c,d) = NAE(\neg{a},\neg{b},\neg{c},\neg{d})$).
+En una de estas dos asignaciones, el valor asignado a $z$ es 0. Esa asignación corresponde a una asignación satisfacible para $\phi$.\\
+
+
+
+\subsubsection{Conclusi\'on}
+Como \textbf{3-SAT} es NP-Completo, y hemos demostrado una reducci\'on polinomial hacia \textbf{NAE 4-SAT}, concluimos que \textbf{NAE 4-SAT} es NP-Hard. 
+
+\subsection{NP-Completitud}
+
+Como \textbf{NAE 4-SAT} pertenece a NP y es NP-Hard, es NP-Completo.
+
+\section{NAE 3-SAT (Not-All-Equal 3-SAT)}
+
+\textbf{Definici\'on:} Dada una f\'ormula booleana en CNF donde cada cl\'ausula tiene exactamente 3 literales, determinar si existe una asignaci\'on de valores de verdad a las variables de modo que en cada cl\'ausula no todos los literales sean verdaderos ni todos sean falsos.
+
+\subsection{Pertenencia a NP}
+El problema \textbf{NAE 3-SAT} pertenece a NP porque, dada una asignaci\'on de valores de verdad a las variables, podemos verificar en tiempo polinomial si no todos los literales en cada cl\'ausula son iguales y la fórmula sea satisfacible.
+
+\subsection{NP-Hardness}
+
+Demostraremos que \textbf{NAE 3-SAT} es NP-Hard mediante una reducci\'on desde \textbf{NAE 4-SAT}.
+
+\subsubsection{Demostraci\'on. Reducción desde NAE 4-SAT}
+Dada una instancia de \textbf{NAE 4-SAT} $\phi$, construiremos una instancia equivalente de \textbf{NAE 3-SAT} $\phi'$ en tiempo polinomial. Para cada cl\'ausula $\text{NAE}(a, b, c, d)$ en $\phi$:
+\begin{itemize}
+    \item Introducimos una nueva variable $w$.
+    \item Reemplazamos $\text{NAE}(a, b, c, d)$ por las cl\'ausulas $\text{NAE}(a, b, w)$ y $\text{NAE}(\neg w, c, d)$ en $\phi'$.
+\end{itemize}
+
+La demostración se basa en que cuatro valores booleanos $a, b, c, d$ no son todos iguales si y solo si existe un valor $w$ tal que $\text{NAE}(a, b, w)$ y $\text{NAE}(\neg w, c, d)$ son verdaderos.
+
+\subsubsection{Conclusi\'on}
+Como \textbf{NAE 4-SAT} es NP-Completo, y hemos demostrado una reducci\'on polinomial hacia \textbf{NAE 3-SAT}, concluimos que \textbf{NAE 3-SAT} es NP-Hard. 
+
+\subsection{NP-Completitud}
+Como \textbf{NAE 3-SAT} pertenece a NP y es NP-Hard, es NP-Completo.
+
+\section{Máximo Corte}
+
+\textbf{Definici\'on:} Sea $G = (V, E)$ un grafo con aristas ponderadas. Un corte es una divisi\'on de los v\'ertices en dos conjuntos $T$ y $V - T$. El costo de un corte es la suma de los pesos de las aristas que van de $T$ a $V - T$. El problema \textbf{Máximo Corte} consiste en determinar si existe un corte con costo al menos $c$ en un grafo dado.
+
+\subsection{Pertenencia a NP}
+
+El problema \textbf{Máximo Corte} pertenece a NP porque, dado un corte $T$, podemos verificar en tiempo polinomial si su costo es al menos $c$ sumando los pesos de las aristas de cruce del corte.
+
+\subsection{NP-Hardness}
+
+Demostraremos que \textbf{Máximo Corte} es NP-Hard mediante una reducci\'on desde \textbf{NAE 3-SAT}.
+
+\subsubsection{Demostraci\'on}
+Dada una instancia de \textbf{NAE 3-SAT} $\phi$, construiremos una instancia equivalente de \textbf{Máximo Corte} $(G, c)$ como sigue:
+\begin{itemize}
+    \item Por cada variable $x_i$ de $\phi$, agregamos dos v\'ertices en $G$ etiquetados como $x_i$ y $\neg x_i$, conectados por una arista con capacidad $M = 10 \cdot m$, donde $m$ es el n\'umero de cl\'ausulas en $\phi$.
+    \item Por cada cl\'ausula $C$ en $\phi$, agregamos un tri\'angulo entre los v\'ertices correspondientes a los t\'erminos en $C$, con aristas de capacidad 1.
+\end{itemize}
+
+Demostremos que $G$ contiene un corte con capacidad al menos $nM+2m$ (donde $n$ es el número de variables) si y solo si $\phi$ es satisfacible.
+\begin{itemize}
+    \item $(\Leftarrow)$ Si $\phi$ es satisfactible, entonces existe un corte en $G$ con capacidad al menos $nM + 2m$:
+    Supongamos que $\phi$ es satisfacible y consideremos cualquier asignación satisfacible. Esta asignación corresponde a un corte en $G$ (Un lado del corte consiste en todos los vértices etiquetados por términos que evalúan 1 en la asignación. El otro lado consiste en todos los vértices etiquetados por términos que evalúan 0). 
+    Este corte tiene capacidad el menos $nM+2m$ porque:
+    \begin{itemize}
+        \item Como exactamente uno de los términos $x_i$ y $\neg{x_i}$ evalúa 1 en la asignación, todos los arcos entre $x_i$ y $\neg x_i$ cruzan el corte (contribuyendo $n \cdot M$).
+        \item Como la asignación satisface $\phi$, exactamente dos aristas en cada tri\'angulo cruzan el corte (contribuyendo $2 \cdot m$).
+    \end{itemize}
+    \item $(\Rightarrow)$ Si existe un corte con capacidad al menos $n \cdot M + 2 \cdot m$, entonces corresponde a una asignaci\'on satisfactoria para $\phi$:
+    Supongamos que $G$ contiene un corte con capacidad el menos $nM+2m$. Probemos que:
+    \begin{itemize}
+        \item Todas las aristas entre $x_i$ y $\neg x_i$ cruzan el corte, garantizando una asignaci\'on consistente. Esto ocurre
+        porque cualquier corte que no contenga una de estas aristas tendrá como mucho capacidad $(n-1)M+3m=nM+3m-10m$, que es estrictamente menor que $nM+2m$.
+        \item Exactamente dos aristas en cada tri\'angulo cruzan el corte, satisfaciendo cada cl\'ausula de $\phi$. Esto ocurre porque ningún corte puede separar las tres aristas de un triángulo y
+        por lo tanto si un corte separa menos de dos aristas en uno de los triángulos de cláusula, entonces su capacidad es estrictamente menor que $nM+2m$. 
+
+    \end{itemize}
+Como todas las aristas entre $x_i$ y $\neg x_i$ cruzan el corte, este corresponde a una asignación para $\phi$. 
+Además, como exactamente dos aristas en cada tri\'angulo cruzan el corte, la asignaci\'on correspondiente es satisfactible.
+\end{itemize}
+
+\subsubsection{Conclusi\'on}
+Como \textbf{NAE 3-SAT} es NP-Completo, y hemos demostrado una reducci\'on polinomial hacia \textbf{Máximo Corte}, concluimos que \textbf{Máximo Corte} es NP-Hard. 
+
+\subsection{NP-Completitud}
+
+Como \textbf{Máximo Corte} pertenece a NP y es NP-Completo, es NP-Completo.
 
 \end{document}

@@ -47,3 +47,21 @@
 \contentsline {paragraph}{Correctitud:}{13}{section*.5}%
 \contentsline {subsubsection}{\numberline {8.2.2}Conclusi\'on}{14}{subsubsection.8.2.2}%
 \contentsline {subsection}{\numberline {8.3}NP-Completitud}{14}{subsection.8.3}%
+\contentsline {section}{\numberline {9}NAE 4-SAT (Not-All-Equal 4-SAT)}{14}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Pertenencia a NP}{14}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}NP-Hardness}{14}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Demostraci\'on. Reducción desde 3-SAT}{14}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}Conclusi\'on}{15}{subsubsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.3}NP-Completitud}{15}{subsection.9.3}%
+\contentsline {section}{\numberline {10}NAE 3-SAT (Not-All-Equal 3-SAT)}{15}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Pertenencia a NP}{15}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}NP-Hardness}{15}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Demostraci\'on. Reducción desde NAE 4-SAT}{15}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Conclusi\'on}{15}{subsubsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.3}NP-Completitud}{15}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Máximo Corte}{16}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Pertenencia a NP}{16}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}NP-Hardness}{16}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}Demostraci\'on}{16}{subsubsection.11.2.1}%
+\contentsline {subsubsection}{\numberline {11.2.2}Conclusi\'on}{17}{subsubsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.3}NP-Completitud}{17}{subsection.11.3}%

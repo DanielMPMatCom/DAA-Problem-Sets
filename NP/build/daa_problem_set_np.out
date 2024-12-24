@@ -43,3 +43,21 @@
 \BOOKMARK [3][-]{subsubsection.8.2.1}{Demostraci\363n. Reducci\363n desde Retroalimentaci\363n de V\351rtices}{subsection.8.2}% 43
 \BOOKMARK [3][-]{subsubsection.8.2.2}{Conclusi\363n}{subsection.8.2}% 44
 \BOOKMARK [2][-]{subsection.8.3}{NP-Completitud}{section.8}% 45
+\BOOKMARK [1][-]{section.9}{NAE 4-SAT \(Not-All-Equal 4-SAT\)}{}% 46
+\BOOKMARK [2][-]{subsection.9.1}{Pertenencia a NP}{section.9}% 47
+\BOOKMARK [2][-]{subsection.9.2}{NP-Hardness}{section.9}% 48
+\BOOKMARK [3][-]{subsubsection.9.2.1}{Demostraci\363n. Reducci\363n desde 3-SAT}{subsection.9.2}% 49
+\BOOKMARK [3][-]{subsubsection.9.2.2}{Conclusi\363n}{subsection.9.2}% 50
+\BOOKMARK [2][-]{subsection.9.3}{NP-Completitud}{section.9}% 51
+\BOOKMARK [1][-]{section.10}{NAE 3-SAT \(Not-All-Equal 3-SAT\)}{}% 52
+\BOOKMARK [2][-]{subsection.10.1}{Pertenencia a NP}{section.10}% 53
+\BOOKMARK [2][-]{subsection.10.2}{NP-Hardness}{section.10}% 54
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Demostraci\363n. Reducci\363n desde NAE 4-SAT}{subsection.10.2}% 55
+\BOOKMARK [3][-]{subsubsection.10.2.2}{Conclusi\363n}{subsection.10.2}% 56
+\BOOKMARK [2][-]{subsection.10.3}{NP-Completitud}{section.10}% 57
+\BOOKMARK [1][-]{section.11}{M\341ximo Corte}{}% 58
+\BOOKMARK [2][-]{subsection.11.1}{Pertenencia a NP}{section.11}% 59
+\BOOKMARK [2][-]{subsection.11.2}{NP-Hardness}{section.11}% 60
+\BOOKMARK [3][-]{subsubsection.11.2.1}{Demostraci\363n}{subsection.11.2}% 61
+\BOOKMARK [3][-]{subsubsection.11.2.2}{Conclusi\363n}{subsection.11.2}% 62
+\BOOKMARK [2][-]{subsection.11.3}{NP-Completitud}{section.11}% 63
