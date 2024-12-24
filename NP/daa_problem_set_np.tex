@@ -68,7 +68,7 @@ Dado que $|X| = n$ y $|S| = m$, la verificación puede realizarse de la siguient
 \subsection{NP-Hardness}
 Demostraremos que \textbf{Exact Cover} es NP-Hard mediante una reducción desde \textbf{3-SAT} en tiempo polinomial 
 
-\subsubsection{Demostración. Reducción desde \textbf{3-SAT}}
+\subsubsection{Demostración. Reducción desde 3-SAT}
 Dada una fórmula booleana $F$ en forma normal conjuntiva con $n$ variables $x_1, x_2, \dots, x_n$ y $m$ cláusulas $C_1, C_2, \dots, C_m$, donde cada cláusula $C_i$ está formada por $l_i$ literales $L_{ik}$, construiremos una instancia del problema \textbf{Exact Cover} como sigue:
 \begin{enumerate}
     \item Definimos el universo $U$ como:
@@ -105,7 +105,7 @@ Sea $C$ una solución de \textbf{Exact Cover}:
 \end{itemize}
 Por lo tanto, la asignación correspondiente satisface $F$.
 
-\textbf{Conclusión:} Dado que $F$ es satisfacible si y solo si la instancia de \textbf{Exact Cover} tiene solución, y la reducción se realiza en tiempo polinomial, \textbf{Exact Cover} es NP-Hard.
+\subsubsection{Conclusión:} Dado que $F$ es satisfacible si y solo si la instancia de \textbf{Exact Cover} tiene solución, y la reducción se realiza en tiempo polinomial, \textbf{Exact Cover} es NP-Hard.
 
 \subsection{NP-Completitud}
 Dado que \textbf{Exact Cover} pertenece a NP y es NP-Hard, concluimos que es NP-Completo.
@@ -185,7 +185,7 @@ Dada una coloraci\'on v\'alida de $G$, asignamos valores de verdad a las variabl
 \end{itemize}
 Por lo tanto, $t$ satisface $F$.
 
-\textbf{Conclusi\'on:} Como la construcci\'on de $G$ se realiza en tiempo polinomial y la satisfacibilidad de $F$ es equivalente a la colorabilidad de $G$, \textbf{3-Coloreo} es NP-Hard.
+\subsubsection{Conclusi\'on:} Como la construcci\'on de $G$ se realiza en tiempo polinomial y la satisfacibilidad de $F$ es equivalente a la colorabilidad de $G$, \textbf{3-Coloreo} es NP-Hard.
 
 \subsection{NP-Completitud}
 Dado que \textbf{3-Coloreo} pertenece a NP y es NP-Hard, concluimos que es NP-Completo.
@@ -352,7 +352,7 @@ Por lo tanto, si $G'$ tiene un conjunto dominante de tamaño $k$, entonces $G$ t
 
 Así, hemos probado ambos lados de la equivalencia. Existe un conjunto dominante de tamaño $k$ en $G'$ si y solo si existe un vertex cover de tamaño $k$ en $G$. 
 
-\subsection{Conclusión}
+\subsubsection{Conclusión}
 Dado que sabemos que el problema \textbf{Vertex Cover} es NP-Completo, y demostramos que es posible hacer una reducción en tiempo polinomial de \textbf{Vertex Cover} a \textbf{Conjunto Dominante}, el problema \textbf{Conjunto Dominante} es NP-Hard.
 
 
@@ -392,6 +392,8 @@ Esta construcci\'on de $G'$ se realiza en tiempo polinomial, ya que simplemente 
     Consideremos cualquier ciclo en $G'$. Dicho ciclo debe incluir uno de los v\'ertices adicionales $w$ correspondientes a una arista $(u, v)$ en $G$. En este caso, podemos reemplazar $w$ por uno de sus extremos $u$ o $v$ en $F$, ya que eliminar $u$ o $v$ es suficiente para romper todos los ciclos que incluyen $w$. Finalmente, dado que todos los ciclos en $G'$ se corresponden con las aristas de $G$, $F$ debe contener un v\'ertice de cada arista en $G$, lo que implica que $F$ es un vertex cover en $G$.
 \end{itemize}
 
+
+\subsubsection{Conclusión}
 Dado que $S$ es un vertex cover de tama\~no $k$ en $G$ si y solo si $F$ es un conjunto de retroalimentaci\'on de v\'ertices de tama\~no $k$ en $G'$, y como sabemos que \textbf{Vertex Cover} es NP-Completo, hemos probado que \textbf{Retroalimentaci\'on de V\'ertices} es NP-Hard.
 
 \subsection{NP-Completitud}
@@ -514,7 +516,7 @@ El problema \textbf{Máximo Corte} pertenece a NP porque, dado un corte $T$, pod
 
 Demostraremos que \textbf{Máximo Corte} es NP-Hard mediante una reducci\'on desde \textbf{NAE 3-SAT}.
 
-\subsubsection{Demostraci\'on}
+\subsubsection{Demostraci\'on. Reducción desde NAE 3-SAT}
 Dada una instancia de \textbf{NAE 3-SAT} $\phi$, construiremos una instancia equivalente de \textbf{Máximo Corte} $(G, c)$ como sigue:
 \begin{itemize}
     \item Por cada variable $x_i$ de $\phi$, agregamos dos v\'ertices en $G$ etiquetados como $x_i$ y $\neg x_i$, conectados por una arista con capacidad $M = 10 \cdot m$, donde $m$ es el n\'umero de cl\'ausulas en $\phi$.
