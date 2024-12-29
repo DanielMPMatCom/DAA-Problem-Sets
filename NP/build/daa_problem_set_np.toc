@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}
+\babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Exact Cover}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Pertenencia a NP}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}NP-Hardness}{3}{subsection.1.2}%
@@ -68,3 +68,9 @@
 \contentsline {subsubsection}{\numberline {11.2.1}Demostraci\'on. Reducción desde NAE 3-SAT}{17}{subsubsection.11.2.1}%
 \contentsline {subsubsection}{\numberline {11.2.2}Conclusi\'on}{18}{subsubsection.11.2.2}%
 \contentsline {subsection}{\numberline {11.3}NP-Completitud}{18}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Número Domatic}{18}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Pertenencia a NP}{18}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}NP-Hardness}{18}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}Demostración. Reducción desde 3-SAT}{18}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}Conclusión}{19}{subsubsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.3}NP-Completitud}{20}{subsection.12.3}%

@@ -311,7 +311,7 @@ Como \textbf{Cobertura de Cliques} es \textbf{NP} y \textbf{NP-Hard}, podemos co
 
 \section{Conjunto Dominante}
 
-
+\label{sec:domatic}
 \textbf{Definici\'on:} En un grafo $G = (V, E)$, un conjunto de v\'ertices $D \subseteq V$ es un conjunto dominante si cada v\'ertice de $V$ que no est\'a en $D$ es adyacente a al menos un v\'ertice en $D$. 
 
 \textbf{Problema:} Determinar el conjunto dominante de menor cardinalidad en un grafo $G$. 
@@ -523,7 +523,7 @@ Dada una instancia de \textbf{NAE 3-SAT} $\phi$, construiremos una instancia equ
     \item Por cada cl\'ausula $C$ en $\phi$, agregamos un tri\'angulo entre los v\'ertices correspondientes a los t\'erminos en $C$, con aristas de capacidad 1.
 \end{itemize}
 
-Demostremos que $G$ contiene un corte con capacidad al menos $nM+2m$ (donde $n$ es el número de variables) si y solo si $\phi$ es satisfacible.
+\textbf{Probemos que: $G$ contiene un corte con capacidad al menos $nM+2m$ (donde $n$ es el número de variables) si y solo si $\phi$ es satisfacible.}
 \begin{itemize}
     \item $(\Leftarrow)$ Si $\phi$ es satisfactible, entonces existe un corte en $G$ con capacidad al menos $nM + 2m$:
     Supongamos que $\phi$ es satisfacible y consideremos cualquier asignación satisfacible. Esta asignación corresponde a un corte en $G$ (Un lado del corte consiste en todos los vértices etiquetados por términos que evalúan 1 en la asignación. El otro lado consiste en todos los vértices etiquetados por términos que evalúan 0). 
@@ -552,4 +552,75 @@ Como \textbf{NAE 3-SAT} es NP-Completo, y hemos demostrado una reducci\'on polin
 
 Como \textbf{Máximo Corte} pertenece a NP y es NP-Completo, es NP-Completo.
 
+
+
+\section{Número Domatic}
+
+El número domatic de un grafo $G$, denotado como $domatic(G)$, es el número máximo $k$ tal que los vértices de $G$ pueden dividirse en $k$ conjuntos disjuntos $D_1, D_2, \dots, D_k$, donde cada $D_i$ es un \hyperref[sec:domatic]{conjunto dominante}.
+
+
+El problema consiste en determinar el número domatic de un grafo $G$. 
+
+\subsection{Pertenencia a NP}
+
+Al no conocer algoritmo polinomial para verificar una solución del problema, no podemos asegurar su pertenencia a NP.
+
+\subsection{NP-Hardness}
+
+A continuación, se muestra que este problema es NP-Hard mediante una reducción desde \textsc{3-SAT}.
+
+\subsubsection{Demostración. Reducción desde 3-SAT}
+Sea $\varphi = C_1 \land C_2 \land \dots \land C_m$ una instancia de \textsc{3-SAT} con $n$ variables $x_1, \dots, x_n$. Construimos un grafo $G = (V, E)$ tal que:
+\begin{itemize}
+    \item Por cada cláusula $C_i \in \{C_1, \dots, C_m\}$, existe un vértice $vc_i$.
+    \item Por cada variable $x_j \in \{x_1, \dots, x_n\}$, existen tres vértices $a_j$, $b_j$ y $c_j$. Estos vértices forman un triángulo en el grafo.
+    \item El vértice $a_j$ corresponde al literal positivo $x_j$, mientras que el vértice $b_j$ corresponde al literal negativo $\neg x_j$.
+    \item Existe una arista entre $vc_i$ y $a_j$ si y solo si $x_j$ aparece en la cláusula $C_i$.
+    \item Existe una arista entre $vc_i$ y $b_j$ si y solo si $\neg x_j$ aparece en la cláusula $C_i$.
+    \item Existe un vértice $r$ conectado a $vc_i$ mediante un camino $r \to s_i \to vc_i$ para cada $i \in \{1, \dots, m\}$.
+    \item Además, $r$ está conectado directamente a $a_j$ y $b_j$ para cada $j \in \{1, \dots, n\}$.
+\end{itemize}
+
+Esto completa la construcción del grafo $G$. La siguiente figura ilustra esta construcción:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/domatic.png}
+    \label{fig:domatic}
+\end{figure}
+
+\newpage
+\textbf{Probemos que: La fórmula $\varphi$ es satisfacible si y solo si el grafo $G$ tiene número domatic al menos 3.}
+
+
+$(\Rightarrow)$ Supongamos que $\varphi$ tiene una asignación satisfactoria tal que, sin pérdida de generalidad, las variables $x_1, \dots, x_k$ son verdaderas y las variables restantes $x_{k+1}, \dots, x_n$ son falsas. Mostraremos que el número domatic de $G$ es al menos 3.
+
+Dividimos el conjunto de vértices $V$ en tres conjuntos disjuntos:
+\begin{align*}
+    V_1 &= \{a_1, \dots, a_k, b_{k+1}, \dots, b_n\} \cup \{r\}, \\
+    V_2 &= \{b_1, \dots, b_k, a_{k+1}, \dots, a_n, vc_1, \dots, vc_m\}, \\
+    V_3 &= \{c_1, \dots, c_n, s_1, \dots, s_m\}.
+\end{align*}
+
+Es fácil verificar que cada uno de estos conjuntos es un conjunto dominante en $G$. Por lo tanto, $domatic(G) \geq 3$.
+
+$(\Leftarrow)$ Supongamos que el grafo $G$ tiene número domatic al menos 3. Esto implica que $domatic(G) = 3$, ya que el vértice $c_i$ tiene grado 2 y puede ser dominado por como máximo tres conjuntos diferentes.
+
+Sea $V_1, V_2, V_3 \subseteq V$ una partición de $V$ tal que cada conjunto es dominante. Sin pérdida de generalidad, asumimos que $r \in V_1$. Entonces, para cada $i \in \{1, \dots, n\}$, sólo hay dos posibilidades:
+\begin{enumerate}
+    \item $vc_i \in V_2$ y $s_i \in V_3$.
+    \item $vc_i \in V_3$ y $s_i \in V_2$.
+\end{enumerate}
+
+De lo contrario, $s_i$ no podría ser dominado por uno de los conjuntos $V_2$ o $V_3$. Sin pérdida de generalidad, consideremos $vc_i \in V_2$. Entonces, $s_i \in V_1$. Ahora, $vc_i$ debe ser dominado por algún vértice en $V_1$. Por lo tanto, al menos uno de los vértices $a_j$ o $b_j$ conectados a $vc_i$ debe estar en $V_1$. Por construcción, el conjunto $V_1 \cap \{a_1, \dots, a_n, b_1, \dots, b_n\}$ representa una asignación satisfactoria para $\varphi$.
+
+Además, para cada $j$, no pueden elegirse ambos vértices $a_j$ y $b_j$ en $V_1$, ya que en ese caso $c_j$ no sería dominado por $V_2$ ni $V_3$. Por lo tanto, la asignación es válida. Esto completa la demostración.
+
+
+\subsubsection{Conclusión}
+Como \textsc{3-SAT} es NP-Completo, y hemos demostrado una reducción polinomial hacia \textbf{Número Domatic}, concluimos que \textbf{Número Domatic} es NP-Hard.
+
+\subsection{NP-Completitud}
+
+Como no podemos afirmar que \textbf{Número Domatic} sea NP, tampoco podemos afirmar que sea NP-Completo.
 \end{document}
